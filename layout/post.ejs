@@ -3,6 +3,22 @@
   <div class="container">
     <div class="hd-title">
       <%- partial('_partial/post/title', {post: page, index: false, class_name: 'article-top-title'})%>
-    </div>
+      <div class="article-meta">
+        <%- partial('_partial/post/date', {
+          post: page, 
+          archive: false, 
+          class_name: 'article-date',
+          date_format: 'll'
+        }) %>
+        <%- partial('_partial/post/category', {post: page}) %>
+      </div>
   </div>
 </header>
+
+<div class="container">
+
+  <article class="article-content">            
+    <%- page.content %>
+  </article>
+
+</div>

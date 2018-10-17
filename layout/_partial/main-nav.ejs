@@ -2,7 +2,8 @@
   <div class="nav-wrap">
     <div id="menu">
       <% for (var i in theme.menu){ %>
-        <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+        <% t = __(i) %>
+        <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%=  t  %></a>
       <% } %>
     </div>
   </div>

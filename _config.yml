@@ -1,0 +1,5 @@
+# Main menu, displayed in navbar
+menu:
+  home: /
+  archive: /archive
+  about: /about

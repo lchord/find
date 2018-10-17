@@ -1,0 +1,51 @@
+<header class="hd-img">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="hd-title">
+      <h1 class="title"><%- config.title %></h1>
+      <p class="subtitle"><%- config.subtitle %></p>
+    </div>
+  </div>
+</header>
+
+<div class="container article-index-list">
+
+  <% page.posts.each(function(post){ %>
+    <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+    
+      <% if (post.link || post.title){ %>
+        <header class="article-header">
+          <%- partial('_partial/post/title', {post: post, index: true, class_name: 'article-title'})%>
+        </header>
+      <% } %>
+
+      <div class="article-excerpt" itemprop="articleBody">
+        <p><%- truncate(strip_html(post.content), {length: 150, omission: '...'}) %></p>
+      </div>
+
+      <div class="article-meta">
+        <%- partial('_partial/post/date', {
+          post: post, 
+          archive: false, 
+          class_name: 'article-date',
+          date_format: 'll'
+        }) %>
+
+        <%- partial('_partial/post/category', {post: post}) %>
+      </div>
+
+    </article>
+  <% }) %>
+
+  <% if (page.total > 1){ %>
+    <nav id="page-nav">
+      <% var prev_text =  __('prev');var next_text = __('next') %>
+      <%- paginator({
+    
+        prev_text: prev_text,
+        next_text: next_text
+      }) %>
+    </nav>
+  <% } %>
+
+</div>

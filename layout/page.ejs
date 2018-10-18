@@ -1,0 +1,18 @@
+<header class="hd-img">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="hd-title">
+      <%- partial('_partial/post/title', {post: page, index: false, class_name: 'article-top-title'})%>
+      <% if (page.subtitle) { %>
+        <div class="article-meta">
+          <span><%= page.subtitle %></span>
+        </div>
+      <% } %>
+  </div>
+</header>
+
+<div class="container">
+  <article class="article-content">            
+    <%- page.content %>
+  </article>
+</div>

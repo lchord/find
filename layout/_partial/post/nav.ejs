@@ -1,0 +1,26 @@
+<% if (post.prev || post.next){ %>
+<nav id="article-nav" >
+  <% if (post.prev){ %>
+    <div id="article-nav-prev" class="article-nav-item">
+    <a href="<%- url_for(post.prev.path) %>">
+      <div class="article-nav-word full-hidden"><%= __('post.nav-prev') %></div>
+      <div class="article-nav-title mobile-hidden">
+        <% if (post.prev.title){ %>
+          <%= post.prev.title %>
+        <% } else { %>
+          (no title)
+        <% } %>
+      </div>
+    </a>
+    </div>
+  <% } %>
+  <% if (post.next){ %>
+    <div id="article-nav-next" class="article-nav-item">
+      <a href="<%- url_for(post.next.path) %>">
+        <div class="article-nav-word full-hidden"><%= __('post.nav-next') %></div>
+        <div class="article-nav-title mobile-hidden"><%= post.next.title %></div>
+      </a>
+    </div>
+  <% } %>
+</nav>
+<% } %>

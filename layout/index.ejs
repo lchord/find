@@ -15,7 +15,7 @@
     
       <% if (post.link || post.title){ %>
         <header class="article-header">
-          <%- partial('_partial/post/title', {post: post, index: true, class_name: 'article-title'})%>
+          <%- partial('_partial/post/title', {post: post, page_type: 'index', class_name: 'article-title'})%>
         </header>
       <% } %>
 
@@ -26,7 +26,7 @@
       <div class="article-meta">
         <%- partial('_partial/post/date', {
           post: post, 
-          archive: false, 
+          page_type: 'index', 
           class_name: 'article-date',
           date_format: 'll'
         }) %>

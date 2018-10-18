@@ -35,20 +35,30 @@
                 </div></section>
             <% } %>
             <% last = year; %>
-            <section class="archives-wrap">
+            <section class="archive-wrap">
             <div class="archive-year-wrap">
-                <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a>
+                <a class="archive-year"><%= year %></a>
             </div>
             <div class="archives">
         <% } %>
 
         <article class="archive-article archive-type-<%= post.layout %>">
-        <div class="archive-article-inner">
-            <header class="archive-article-header">
-            <%- partial('_partial/post/date', {post: post, archive: true, class_name: 'archive-article-date', date_format: 'MMM D'}) %>
-            <%- partial('_partial/post/title', {post: post, class_name: 'archive-article-title'}) %>
-            </header>
-        </div>
+
+            
+            <%- partial('_partial/post/date', {
+              post: post, 
+              page_type: 'archive', 
+              class_name: 'archive-article-date', 
+              date_format: 'MM/DD'
+            }) %>
+
+            <%- partial('_partial/post/title', {
+              post: post, 
+              class_name: 'archive-article-title',
+              page_type: 'archive'
+            }) %>
+           
+        
         </article>
 
 

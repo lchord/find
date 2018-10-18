@@ -1,4 +1,4 @@
-<% if (!archive){ %>
+<% if (page_type != 'archive'){ %>
   <span><%= __('posted_on') %></span>
 <% } %>
 <a href="<%- url_for(post.path) %>" class="<%= class_name %>"> 

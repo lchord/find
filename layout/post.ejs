@@ -2,7 +2,13 @@
   <div class="overlay"></div>
   <div class="container">
     <div class="hd-title">
-      <%- partial('_partial/post/title', {post: page, index: false, class_name: 'article-top-title'})%>
+
+      <%- partial('_partial/post/title', {
+        post: page, 
+        page_type: 'article', 
+        class_name: 'article-top-title'
+      }) %>
+
       <% if (page.subtitle) { %>
         <h2><%= page.subtitle %></h2>
       <% } %>
@@ -10,7 +16,7 @@
       <div class="article-meta">
         <%- partial('_partial/post/date', {
           post: page, 
-          archive: false, 
+          page_type: 'article', 
           class_name: 'article-date',
           date_format: 'll'
         }) %>

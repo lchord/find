@@ -1,9 +1,16 @@
 home: Home
-archive: Archive
+archives: Archives
 about: About
+
+category: Category
+tag: Tag
 
 posted_on: Posted on
 sorted_in: In
 
 prev: Prev
 next: Next
+
+post:
+  nav-prev: Prev
+  nav-next: Next

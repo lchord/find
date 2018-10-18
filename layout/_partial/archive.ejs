@@ -1,0 +1,60 @@
+<%
+    var title = page.title;
+
+    if (is_archive()){
+      title = __('archives');
+        if (is_month()){
+          title += '@' + page.year + '/' + page.month;
+        } else if (is_year()){
+          title += '@' + page.year;
+        }
+      } else if (is_category()){
+      title = __('category') + '@' + page.category;
+      } else if (is_tag()){
+      title = __('tag') + '@' + page.tag;
+    }
+%>
+
+<header class="hd-img">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="hd-title">
+      <h1 class="title"><%- title %></h1>
+    </div>
+  </div>
+</header>
+
+    <div class="archive-page container">
+    <% var last; %>
+    <% page.posts.each(function(post, i){ %>
+        
+        <% var year = post.date.year(); %>
+        
+        <% if (last != year){ %>
+            <% if (last != null){ %>
+                </div></section>
+            <% } %>
+            <% last = year; %>
+            <section class="archives-wrap">
+            <div class="archive-year-wrap">
+                <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a>
+            </div>
+            <div class="archives">
+        <% } %>
+
+        <article class="archive-article archive-type-<%= post.layout %>">
+        <div class="archive-article-inner">
+            <header class="archive-article-header">
+            <%- partial('_partial/post/date', {post: post, archive: true, class_name: 'archive-article-date', date_format: 'MMM D'}) %>
+            <%- partial('_partial/post/title', {post: post, class_name: 'archive-article-title'}) %>
+            </header>
+        </div>
+        </article>
+
+
+    <% }) %>
+    <% if (page.posts.length){ %>
+    </div></section>
+    
+    <% } %>
+    </div>

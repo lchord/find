@@ -1,6 +1,9 @@
 home: 主页
-archive: 归档
+archives: 归档
 about: 关于
+
+category: 目录
+tag: 标签
 
 posted_on: 发布于
 sorted_in: 分类于

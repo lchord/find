@@ -1,5 +1,5 @@
 # Main menu, displayed in navbar
 menu:
   home: /
-  archive: /archive
+  archives: /archives
   about: /about

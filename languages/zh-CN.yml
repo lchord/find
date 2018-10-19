@@ -14,3 +14,9 @@ next: 下一页
 post:
   nav-prev: 上一篇
   nav-next: 下一篇
+
+archive:
+  posts:
+    zero: 暂无文章 ...
+    one: 1 篇文章 ...
+    other: 目前共有 %d 篇文章 ...

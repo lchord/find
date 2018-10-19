@@ -14,3 +14,9 @@ next: Next
 post:
   nav-prev: Prev
   nav-next: Next
+
+archive:
+  posts:
+    zero: No posts...
+    one: 1 post...
+    other: Totally %d posts now...

@@ -19,8 +19,15 @@
   <div class="overlay"></div>
   <div class="container">
     <div class="hd-title">
-      <h1 class="title"><%- title %></h1>
+      <h1 class="article-top-title"><%- title %></h1>
+
+      <% if (is_archive()) { %>
+        <div class="article-meta">
+        <span><%- _p('archive.posts', site.posts.length) %></span>
+      <% } %>
+      
     </div>
+
   </div>
 </header>
 
@@ -63,8 +70,20 @@
 
 
     <% }) %>
+
     <% if (page.posts.length){ %>
     </div></section>
-    
     <% } %>
+
+    <% if (page.total > 1){ %>
+    <nav id="archive-page-nav">
+      <% var prev_text =  __('prev');var next_text = __('next') %>
+      <%- paginator({
+        prev_text: prev_text,
+        next_text: next_text
+      }) %>
+    </nav>
+    <% } %>
+
     </div>
+

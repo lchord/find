@@ -41,7 +41,9 @@
     <nav id="page-nav">
       <% var prev_text =  __('prev');var next_text = __('next') %>
       <%- paginator({
-    
+        mid_size: 1,
+        end_size: 1,
+        space: '···',
         prev_text: prev_text,
         next_text: next_text
       }) %>

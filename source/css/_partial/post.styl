@@ -18,11 +18,41 @@ h1.article-top-title
         letter-spacing: 0.02rem
     img 
         width: 100%
+    
+    h1, h2, h3 
+        margin-top: 1.2rem
+        margin-bottom: 0.6rem
+    
+    figure
+        margin-top: 0.9rem
+        margin-bottom: 0.9rem
+        display: block
+        padding: 0.9rem 1.1rem
+        background: #f8f9fa
+
+    pre 
+        display: block
+        padding: 0
+        margin: 0
+
+    blockquote
+        padding: 0.3rem 1.2rem
+        border-left: 5px solid #eee
+        margin: 1rem 0 1rem
+        footer 
+            display: block
+            color: #6c757d
+            &::before
+                content: "\2014 \00A0"
+        p 
+            margin-top: 0.5rem !important
+            margin-bottom: 0.5rem !important
+        cite::before
+            content: ', '
 
 #article-page
     margin-top: 50px
     margin-bottom: 60px
-
 
 #article-nav
     border-top: 1px solid #f7f7f7

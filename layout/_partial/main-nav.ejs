@@ -1,12 +1,21 @@
 <nav id=main-nav>
   <div class="nav-wrap">
     <div id="logo">
-    <span><%- config.title %></span>
+    <span><%- theme.logo %></span>
     </div>
-    <div id="menu">
-      <% for (var i in theme.menu){ %>
-        <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%=  __(i)  %></a>
-      <% } %>
+
+    <div class="nav-toggle">
+		  <span class="line"></span>
+		  <span class="line"></span>
+		  <span class="line"></span>
+    </div>
+    
+    <div id="menu" class="menu-iv">
+      <ul class="nav-items">
+        <% for (var i in theme.menu){ %>
+          <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%=  __(i)  %></a>
+        <% } %>
+      </ul>
     </div>
   </div>
 </nav>

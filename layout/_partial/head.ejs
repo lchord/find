@@ -3,6 +3,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
+  <!-- baidu-site-verification -->
+  <% if (theme.baidu_site_verification.enable) { %>
+  <meta name="baidu-site-verification" content= "<%= theme.baidu_site_verification.content %>" />
+  <% } %>
+
   <%
     var title = page.title;
 

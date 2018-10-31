@@ -5,3 +5,8 @@ menu:
   about: /about
 
 logo: lchord's notes
+
+# baidu-site-verification
+baidu_site_verification:
+  enable: true
+  content: wc1rfVdTik

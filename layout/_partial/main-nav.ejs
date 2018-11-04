@@ -1,7 +1,7 @@
 <nav id=main-nav>
   <div class="nav-wrap">
     <div id="logo">
-    <span><%- theme.logo %></span>
+    <span><%- config.title %></span>
     </div>
 
     <div class="nav-toggle">
@@ -11,11 +11,11 @@
     </div>
     
     <div id="menu" class="menu-iv">
-      <ul class="nav-items">
+      <div class="nav-items">
         <% for (var i in theme.menu){ %>
           <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%=  __(i)  %></a>
         <% } %>
-      </ul>
+      </div>
     </div>
   </div>
 </nav>

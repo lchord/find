@@ -8,6 +8,11 @@
   <meta name="baidu-site-verification" content= "<%= theme.baidu_site_verification.content %>" />
   <% } %>
 
+  <!-- Google Analytics -->
+  <% if (theme.gtag.enable) { %>
+  <%- partial('gtag') %>
+  <% } %>
+
   <%
     var title = page.title;
 

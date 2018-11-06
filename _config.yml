@@ -10,3 +10,16 @@ logo: lchord's notes
 baidu_site_verification:
   enable: true
   content: tQKoWHXsWW
+
+# Google Analytics
+## Tracking ID
+ga_id: UA-128661785-1
+## gtag.js
+gtag:
+  enable: true
+
+# comment
+## Disqus
+disqus:
+  enable: true
+  shortname: coding-6

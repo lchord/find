@@ -10,6 +10,7 @@
         flex-wrap: wrap
         width: 95%
         align-items: center
+        
     
     #menu
 
@@ -100,17 +101,48 @@
   -o-transform: translateY(-9px) rotate(-45deg)
   transform: translateY(-9px) rotate(-45deg)
 
-
-
-
-
 @media screen and (max-width: 460px)
     .index-hd-title
         h1 
             margin: 0
-            font-size: 8vw
+            font-size: 9vw
         h1.index-subtitle    
             margin-bottom: 50px
     .index-hd-title
     .hd-title
         margin-top: 100px
+    
+    .article-header>h1, h1.article-top-title 
+            font-size: 9vw
+    
+    /* archive*/
+
+    .archive-year-wrap
+        font-weight: 700
+        padding-left: 1.2rem
+        font-size: 1.6rem
+        padding-top: 0.9rem
+        padding-bottom: 0.9rem
+
+    .archive-article-date
+        display: block
+        font-size: 1.25rem
+        a,time  
+            color: #999999
+
+    .archive-article-title
+        margin-left: 0
+        display: block
+        font-size: 1.35rem
+        border-left: 1px
+        line-height: 1.2
+
+    .archive-article
+        padding-left: 1.2rem
+        padding-top: 5px
+        padding-bottom: 5px
+        line-height: 1.5
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+ 

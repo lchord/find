@@ -28,13 +28,7 @@
   <title><% if (title){ %><%= title %> - <%= config.title %><% } else { %><%= config.title %> - <%= config.subtitle %><% } %></title>
   <link rel="icon" href="/img/favicon.png" />
   <%- css('css/find') %>
-  <script async src="/js/jquery.min.js"></script>
-  <script async src="/js/find.js"></script>
 
-  <% if (is_post() || is_page()) { %>
-  <script async src="https://<%= theme.disqus.shortname %>.disqus.com/embed.js"></script>
-  <% } %>
 
-  
-  
+
 </head>
